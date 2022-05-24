@@ -46,12 +46,12 @@ export default {
             axios
             .get(this.API_URL)
             .then(response => {
-                console.log(response);
+                //console.log(response);
                 this.discs = response.data;
                 this.loading = false;
             })
             .catch(error => {
-                console.log(error);
+                //console.log(error);
                 this.error = `Sorry There is a problem! ${error.message}`
             });
         }   
