@@ -1,0 +1,74 @@
+@import '~/node_modules/bootstrap/scss/bootstrap.scss';
+@import 'variables';
+
+/* COMMON */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* HEADER */
+
+header {
+    height: 60px;
+    background-color: $headerColor;
+    .logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        img {
+            display: inline-block;
+            width: 35px;
+            aspect-ratio: 1/1;
+            margin-left: calc((60px - 35px) / 2);
+        }
+    }
+}
+
+
+/* MAIN */
+
+main {
+    height: calc(100vh - 60px);
+    background-color: $bgColor;
+    .container {
+        padding: 2rem 0;
+        .discs {
+            max-height: calc(100vh - 60px - 4rem);
+            overflow-y: auto;
+            .row {
+                margin: 0;
+                .cols {
+                    .card {
+                        background-color: $headerColor;
+                        img {
+                            aspect-ratio: 1/1;
+                            padding: 0.75rem;
+                        }
+                        h6 {
+                            font-size: 18px;
+                        }
+                        .card-text {
+                            color: $lighterTextColor;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
